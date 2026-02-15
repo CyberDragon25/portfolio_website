@@ -1,0 +1,44 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="128" height="128" rx="24" fill="url(#bgGradient)"/>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- S Letter -->
+  <path d="M 40 50 Q 40 35 55 35 Q 70 35 70 45 Q 70 55 55 55 Q 40 55 40 70 Q 40 85 55 85 Q 70 85 70 75" 
+        stroke="white" 
+        stroke-width="8" 
+        fill="none" 
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#shadow)"/>
+  
+  <!-- B Letter -->
+  <path d="M 80 35 L 80 85 M 80 35 Q 95 35 95 45 Q 95 52 85 55 Q 95 58 95 70 Q 95 85 80 85" 
+        stroke="white" 
+        stroke-width="8" 
+        fill="none" 
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#shadow)"/>
+</svg>
